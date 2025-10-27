@@ -1,85 +1,44 @@
 "use client";
-import { Icon } from '@iconify/react';
-import React, { useState } from "react";
+import React from "react";
+import { useProductStore } from "@/store/productStore"; // @ alias 사용
 
 export default function Purifier() {
-  const [selectedProduct, setSelectedProduct] = useState(null); // 선택된 상품 상태
-
   const products = [
-    {
-      id: "KO1819-A",
-      img: "/prds/KO1819-A-.png",
-      detailsImg: "/prds/KO1819-A.png",
-      surface: "0.18㎡",
-      size: "590/390㎛",
-      flow: "1.8ℓ/min (Under Press 0.1 Mpa)"
-    },
-    {
-      id: "KO1819-B",
-      img: "/prds/KO1819-B-.png",
-      detailsImg: "/prds/KO1819-B.png",
-      surface: "0.20㎡",
-      size: "600/400㎛",
-      flow: "2.0ℓ/min (Under Press 0.1 Mpa)"
-    },
-    // 추가 상품도 같은 방식으로
+    { name: "KO1819-A", surface: "0.18㎡", size: "590/390㎛", flow: "1.8ℓ/min (Under Press 0.1 Mpa)", badge: null },
+    { name: "KO3014-CC", surface: "0.30㎡", size: "590/390㎛", flow: "1.8ℓ/min (Under Press 0.1 bar)", badge: null },
+    { name: "KO3818-CC", surface: "0.38㎡", size: "590/390㎛", flow: "2.1ℓ/min (Under Press 0.1 Mpa)", badge: null },
+    { name: "KO5830-OS", surface: "0.58㎡", size: "590/390㎛", flow: "3.0ℓ/min (Under Press 0.1 Mpa)", badge: null },
+    { name: "KO32158-A", surface: "0.32㎡", size: "590/390㎛", flow: "1.9ℓ/min (Under Press 0.1 bar)", badge: null },
+    { name: "KO40158-A", surface: "0.40㎡", size: "590/390㎛", flow: "2.3ℓ/min (Under Press 0.1 Mpa)", badge: null },
+    { name: "KO0606-AP", surface: "0.06㎡", size: "590/390㎛", flow: "0.7ℓ/min (Under Press 0.1 Mpa)", badge: 'portable' },
+    { name: "KO1112-N", surface: "0.11㎡", size: "460/300㎛", flow: "0.4~0.6ℓ/min (Gravity)", badge: 'portable' },
+    { name: "KO1112-E", surface: "0.11㎡", size: "460/300㎛", flow: "1.4ℓ/min (Under pressure 0.1Mpa)", badge: 'portable' },
   ];
 
+  const { setSelectedProduct } = useProductStore();
+
   return (
-    <>
-      {/* 상품 리스트 */}
-      <div className="grid grid-cols-5 gap-5">
-        {products.map((prd) => (
+    <div className="grid grid-cols-5 gap-5">
+      {products.map((prd) => {
+        const img = `/prds/${prd.name}-.png`;
+        return (
           <div
-            key={prd.id}
+            key={prd.name}
             className="group relative overflow-hidden rounded-sm cursor-pointer"
-            onClick={() => setSelectedProduct(prd)} // 클릭 시 선택
+            onClick={() => setSelectedProduct({ ...prd, img, detailsImg: `/prds/${prd.name}.png` })}
           >
-            <img src={prd.img} alt={prd.id} />
+            <img src={img} alt={prd.name} />
             <div className="bg-zinc-700 p-2 text-white text-center transition-colors duration-300 group-hover:bg-zinc-900">
-              {prd.id}
+              <span>{prd.name}</span>
+              {prd.badge && (
+                <span className="bg-[#54a8c7] text-white text-xs px-2 py-0.5 rounded-full ml-3">
+                  {prd.badge}
+                </span>
+              )}
             </div>
           </div>
-        ))}
-      </div>
-
-      {/* 상세 레이어 */}
-      {selectedProduct && (
-        <div
-          className='prdLayerBg absolute z-50 bg-white/30 backdrop-blur-sm top-0 left-0 inset-0 pt-[60px] flex items-center justify-center'
-          onClick={() => setSelectedProduct(null)} // 레이어 바깥 클릭 시 닫기
-        >
-          <div
-            className='container mx-auto relative bg-white rounded-4xl p-10 grid grid-cols-2 gap-15 max-w-6xl'
-            onClick={(e) => e.stopPropagation()} // 내부 클릭 시 이벤트 전파 방지
-          >
-            <button
-              className='closePrdDetail absolute top-5 right-5 z-30 cursor-pointer'
-              onClick={() => setSelectedProduct(null)} // 닫기 버튼
-            >
-              <Icon icon="ri:close-large-fill" width="24" height="24" />
-            </button>
-
-            {/* 상품 정보 */}
-            <div className='grid grid-cols-1 gap-5 place-content-start'>
-              <div className='text-3xl font-black'>{selectedProduct.id}</div>
-              <div>
-                <p>Surface area : {selectedProduct.surface}</p>
-                <p>Hollow fiber Size (OD/ID) : {selectedProduct.size}</p>
-                <p>Initial Flow rate : {selectedProduct.flow}</p>
-              </div>
-            </div>
-
-            {/* 이미지 */}
-            <div className='flex justify-center items-center'>
-              <img src={selectedProduct.detailsImg} alt={selectedProduct.id} className="max-h-[600px] object-contain" />
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* 상태 확인용 */}
-      <pre>{JSON.stringify(selectedProduct, null, 2)}</pre>
-    </>
+        );
+      })}
+    </div>
   );
 }

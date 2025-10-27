@@ -3,6 +3,7 @@ import { Noto_Sans_KR, Open_Sans } from "next/font/google";
 import HeaderFixed from '@/components/layouts/HeaderFixed';
 import SideFixedMenu from '@/components/layouts/SideFixedMenu';
 import SmoothScrollProvider from "@/components/layouts/SmoothScrollProvider";
+import ProductDetailLayer from '@/components/common/ProductDetailLayer';
 
 const notoSansKR = Noto_Sans_KR({
   subsets: ["latin"], // 한글은 latin도 포함되어야 함
@@ -28,8 +29,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ko" className={`${notoSansKR.variable} ${openSans.variable}`}>
       <body
-        className={`antialiased`}
+        className={` antialiased`}
       >
+        <ProductDetailLayer />
         <HeaderFixed />
         <SmoothScrollProvider>
           {children}

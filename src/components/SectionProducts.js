@@ -10,7 +10,7 @@ export default function SectionProducts() {
   const [activeTab, setActiveTab] = useState("home");
 
   return (
-    <section className="section relative min-h-screen bg-zinc-200 flex items-center justify-center py-40">
+    <section className="section min-h-screen bg-zinc-200 flex items-center justify-center py-40">
       <div className="container mx-auto grid grid-cols-1 gap-10 place-items-start">
         {/* 왼쪽 텍스트 */}
         <div className="grid grid-cols-1 gap-2 text-2xl col-span-1">
