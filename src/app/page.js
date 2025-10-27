@@ -5,6 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Section1Hero from '@/components/Section1Hero';
 import SectionGreeting from '@/components/SectionGreeting';
+import SectionHistory from '@/components/SectionHistory';
+import SectionProducts from '@/components/SectionProducts';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,12 +15,8 @@ export default function Home() {
     <main className="">
       <Section1Hero />
       <SectionGreeting />
-      <section className="section min-h-screen bg-green-400 flex items-center justify-center">
-        Section 2
-      </section>
-      <section className="section min-h-screen bg-blue-400 flex items-center justify-center">
-        Section 3
-      </section>
+      <SectionHistory />
+      <SectionProducts />
     </main >
   );
 }
