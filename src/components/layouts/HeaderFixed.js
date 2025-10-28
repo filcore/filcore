@@ -80,7 +80,6 @@ export default function HeaderFixed() {
           <li><Link href="/">제품소개</Link></li>
           <li><Link href="/">기술연구소</Link></li>
           <li><Link href="/">필코아소식</Link></li>
-          <li><Link href="/">고객센터</Link></li>
           <li><Link href="/">ENG</Link></li>
           <li>
             <Link

@@ -2,37 +2,14 @@
 import React from "react";
 import { useProductStore } from "@/store/productStore"; // @ alias 사용
 
-export default function Commercial() {
+export default function CertificatesList() {
   const products = [
-    {
-      name: "10 inch (Popular)",
-      surface: "1.4㎡",
-      size: "590/390㎛",
-      flow: "6.0ℓ/min (Under Press 0.1 Mpa)",
-      badge: "commercial",
-    },
-    {
-      name: "10 inch (Premium)",
-      surface: "1.40㎡",
-      size: "590/390㎛",
-      flow: "6.0ℓ/min (Under Press 0.1 Mpa)",
-      badge: "commercial",
-    },
-    {
-      name: "20 inch",
-      surface: "4.13㎡",
-      size: "590/390㎛",
-      flow: "9.0ℓ/min (Under pressure 0.1Mpa)",
-      badge: "commercial",
-    },
-    {
-      name: "20 inch (in)",
-      surface: "5.064㎡",
-      size: "590/390㎛",
-      flow: "Flow test is required (Under development)",
-      badge: "industrial",
-    },
+    { name: "ISO14001" },
+    { name: "ISO9001" },
+    { name: "CERTIFICATE of PATENT" },
+    { name: "NSF CERTIFICATE", desc: 'NSF/ANSI 42' },
   ];
+
 
   const { setSelectedProduct } = useProductStore();
 

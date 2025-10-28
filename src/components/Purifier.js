@@ -10,10 +10,17 @@ export default function Purifier() {
     { name: "KO5830-OS", surface: "0.58㎡", size: "590/390㎛", flow: "3.0ℓ/min (Under Press 0.1 Mpa)", badge: null },
     { name: "KO32158-A", surface: "0.32㎡", size: "590/390㎛", flow: "1.9ℓ/min (Under Press 0.1 bar)", badge: null },
     { name: "KO40158-A", surface: "0.40㎡", size: "590/390㎛", flow: "2.3ℓ/min (Under Press 0.1 Mpa)", badge: null },
-    { name: "KO0606-AP", surface: "0.06㎡", size: "590/390㎛", flow: "0.7ℓ/min (Under Press 0.1 Mpa)", badge: 'portable' },
-    { name: "KO1112-N", surface: "0.11㎡", size: "460/300㎛", flow: "0.4~0.6ℓ/min (Gravity)", badge: 'portable' },
-    { name: "KO1112-E", surface: "0.11㎡", size: "460/300㎛", flow: "1.4ℓ/min (Under pressure 0.1Mpa)", badge: 'portable' },
+    { name: "KO0606-AP", surface: "0.06㎡", size: "590/390㎛", flow: "0.7ℓ/min (Under Press 0.1 Mpa)", badge: "portable" },
+    { name: "KO1112-N", surface: "0.11㎡", size: "460/300㎛", flow: "0.4~0.6ℓ/min (Gravity)", badge: "portable" },
+    { name: "KO1112-E", surface: "0.11㎡", size: "460/300㎛", flow: "1.4ℓ/min (Under pressure 0.1Mpa)", badge: "portable" },
+    { name: "KO1512-06N", surface: "0.15㎡", size: "590/390㎛", flow: "0.6~0.8ℓ/min (Gravity)", badge: "portable" },
+    { name: "KO1512-06E", surface: "0.15㎡", size: "590/390㎛", flow: "1.6ℓ/min (Under Press 0.1 Mpa)", badge: "portable" },
+    { name: "KO1512-01N", surface: "0.15㎡", size: "590/390㎛", flow: "0.8~1.0ℓ/min (Gravity)", badge: "portable" },
+    { name: "KO1512-01E", surface: "0.15㎡", size: "590/390㎛", flow: "1.8ℓ/min (Under Press 0.1 Mpa)", badge: "portable" },
+    { name: "KO2830-N", surface: "0.28㎡", size: "590/390㎛", flow: "1.0~1.2ℓ/min (Gravity)", badge: "portable" },
+    { name: "KO2830-E", surface: "0.28㎡", size: "590/390㎛", flow: "1.8ℓ/min (Under pressure 0.1Mpa)", badge: "portable" },
   ];
+
 
   const { setSelectedProduct } = useProductStore();
 

@@ -14,7 +14,7 @@ export default function ProductDetailLayer() {
       onClick={clearSelectedProduct}
     >
       <div
-        className="container mx-auto relative bg-white rounded-4xl p-10 grid grid-cols-2 gap-15 max-w-6xl"
+        className="container mx-auto relative bg-white rounded-4xl p-10 grid grid-cols-2 gap-15 max-w-6xl min-h-80"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -37,6 +37,7 @@ export default function ProductDetailLayer() {
             {selectedProduct.surface && <p>Surface area : {selectedProduct.surface}</p>}
             {selectedProduct.size && <p>Hollow fiber Size (OD/ID) : {selectedProduct.size}</p>}
             {selectedProduct.flow && <p>Initial Flow rate : {selectedProduct.flow}</p>}
+            {selectedProduct.desc && <p>{selectedProduct.desc}</p>}
           </div>
         </div>
 

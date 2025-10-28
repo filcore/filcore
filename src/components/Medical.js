@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function Medical() {
   return (
-    <div className="text-lg">💊 의료용 정수 시스템 정보</div>
+    <div className='bg-zinc-50 text-center p-10'>
+      상품준비중입니다.
+    </div>
   )
 }
