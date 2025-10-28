@@ -4,6 +4,7 @@ import HeaderFixed from '@/components/layouts/HeaderFixed';
 import SideFixedMenu from '@/components/layouts/SideFixedMenu';
 import SmoothScrollProvider from "@/components/layouts/SmoothScrollProvider";
 import ProductDetailLayer from '@/components/common/ProductDetailLayer';
+import NewsDetail from '@/components/common/NewsDetail';
 
 const notoSansKR = Noto_Sans_KR({
   subsets: ["latin"], // 한글은 latin도 포함되어야 함
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
       <body
         className={` antialiased`}
       >
+        <NewsDetail />
         <ProductDetailLayer />
         <HeaderFixed />
         <SmoothScrollProvider>
