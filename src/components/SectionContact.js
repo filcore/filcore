@@ -48,7 +48,7 @@ export default function SectionContact() {
             </div>
             <div className="flex">
               <a
-                href="https://maps.app.goo.gl/ut8eQcuKpNzJhxb49"
+                href="https://maps.app.goo.gl/jjB4mmSFoyY9e3iq8"
                 target="_blank"
                 className="flex items-center border border-zinc-400 p-4 space-x-2 hover:bg-zinc-100 transition"
               >
