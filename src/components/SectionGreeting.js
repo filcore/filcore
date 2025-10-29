@@ -38,7 +38,7 @@ export default function SectionGreeting() {
             </p>
             <p>
               ㈜필코아 대표 <br />
-              <strong>김승현, 몬젠타카시</strong>
+              <strong>김승현</strong>
             </p>
           </div>
         </div>
