@@ -16,13 +16,25 @@ export default function SectionContact() {
 
           <div className="grid grid-cols-1 gap-5 text-lg">
             <div>
-              <div className="text-xl font-bold">Email.</div>
-              <div>국내영업 문의 : domestic@filcore.co.kr</div>
-              <div>해외영업 문의 : overseas@filcore.co.kr</div>
+              <div className="text-xl font-bold mb-2">Email.</div>
+              <div className='space-y-2'>
+                <div>
+                  <div className='text-sm font-bold'>
+                    국내영업 문의
+                  </div>
+                  <div>domestic@filcore.co.kr</div>
+                </div>
+                <div>
+                  <div className='text-sm font-bold'>
+                    해외영업 문의
+                  </div>
+                  <div>overseas@filcore.co.kr</div>
+                </div>
+              </div>
             </div>
             <div>
               <div className="text-xl font-bold">Tel.</div>
-              id-      <div>+82-31-433-3988</div>
+              <div>+82-31-433-3988</div>
             </div>
             <div>
               <div className="text-xl font-bold">Fax.</div>
