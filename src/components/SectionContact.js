@@ -8,8 +8,8 @@ export default function SectionContact() {
   const { openNews } = useNewsStore();
 
   return (
-    <section className="section sectionContact relative min-h-screen bg-[url(/white6.jpg)] bg-cover bg-center flex items-center justify-center py-40">
-      <div className="container mx-auto grid grid-cols-2 gap-10 place-items-start">
+    <section className="section sectionContact relative min-h-screen bg-[url(/white6.jpg)] bg-cover bg-center flex items-center justify-center py-20 md:py-40">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-15 md:gap-10 place-items-start px-5 md:px-0">
         {/* 왼쪽 Contact 정보 */}
         <div className="grid grid-cols-1 gap-5 text-2xl col-span-1">
           <div className="text-5xl font-black">Contact.</div>

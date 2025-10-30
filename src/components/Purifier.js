@@ -25,7 +25,7 @@ export default function Purifier() {
   const { setSelectedProduct } = useProductStore();
 
   return (
-    <div className="grid grid-cols-5 gap-5">
+    <div className="grid grid-cols-3 md:grid-cols-5 gap-5">
       {products.map((prd) => {
         const img = `/prds/${prd.name}-.png`;
         return (

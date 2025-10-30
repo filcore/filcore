@@ -2,83 +2,47 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Icon } from "@iconify/react";
+import { menuItems } from "@/data/menuItems";
+import { scrollToSection } from "@/utils/scrollToSection";
+import { useMenuStore } from "@/store/menuStore"; // ✅ 추가
 
-gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function HeaderFixed() {
   const headerRef = useRef(null);
   const logoRef = useRef(null);
-  const [activeMenu, setActiveMenu] = useState("sectionHero"); // 기본 활성 메뉴
-
-  const menuItems = [
-    { name: "인사말", target: "sectionGreeting" },
-    { name: "제품소개", target: "sectionProducts" },
-    { name: "기술연구소", target: "sectionRnd" },
-    { name: "필코아소식", target: "sectionContact" },
-  ];
+  const [activeMenu, setActiveMenu] = useState("sectionHero");
+  const openMenu = useMenuStore((state) => state.openMenu); // ✅ Zustand 연결
 
   const handleMenuClick = (target) => {
-    const section = document.querySelector(`.${target}`);
-    if (!section) return;
-
-    const targetY = section.getBoundingClientRect().top + window.scrollY - 0;
-
-    gsap.to(window, {
-      duration: 0.7,
-      scrollTo: targetY,
-      ease: "power2.out",
-    });
+    scrollToSection(target, 0);
   };
 
-  // 헤더 축소/확장
+  // ✅ 헤더 축소/확장
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const header = headerRef.current;
       const logo = logoRef.current;
-
       if (!header || !logo) return;
 
+      const isMd = window.innerWidth >= 768; // md 기준
+
       if (scrollY > 50) {
-        header.classList.add("backdrop-blur-sm");
-
-        gsap.to(header, {
-          backgroundColor: "rgba(0, 0, 0, 0.85)",
-          height: "60px",
-          duration: 0.3,
-          ease: "power1.out",
-        });
-
-        gsap.to(logo, {
-          width: "120px",
-          duration: 0.3,
-          ease: "power1.out",
-        });
+        gsap.to(header, { backgroundColor: "rgba(0,0,0,0.85)", height: isMd ? "60px" : "50px", duration: 0.3 });
+        gsap.to(logo, { width: isMd ? "120px" : "100px", duration: 0.3 });
       } else {
-        header.classList.remove("backdrop-blur-sm");
-
-        gsap.to(header, {
-          backgroundColor: "rgba(0, 0, 0, 0)",
-          height: "104px",
-          duration: 0.3,
-          ease: "power1.out",
-        });
-
-        gsap.to(logo, {
-          width: "180px",
-          duration: 0.3,
-          ease: "power1.out",
-        });
+        gsap.to(header, { backgroundColor: "rgba(0,0,0,0)", height: isMd ? "112px" : "80px", duration: 0.3 });
+        gsap.to(logo, { width: isMd ? "180px" : "130px", duration: 0.3 });
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // ✅ ScrollTrigger로 메뉴 활성화
+  // ✅ ScrollTrigger로 현재 메뉴 활성화
   useEffect(() => {
     menuItems.forEach((item) => {
       const section = document.querySelector(`.${item.target}`);
@@ -86,7 +50,7 @@ export default function HeaderFixed() {
 
       ScrollTrigger.create({
         trigger: section,
-        start: "top 100", // 섹션이 화면 상단 100px 지점에 도달하면
+        start: "top 100",
         end: "bottom top",
         onEnter: () => setActiveMenu(item.target),
         onEnterBack: () => setActiveMenu(item.target),
@@ -97,39 +61,34 @@ export default function HeaderFixed() {
   }, []);
 
   return (
-    <div
-      ref={headerRef}
-      className="header fixed top-0 left-0 w-full z-30 h-26 flex items-center"
-    >
-      <div className="container mx-auto flex items-center justify-between">
+    <div ref={headerRef} className="fixed top-0 left-0 w-full z-30 h-20 md:h-28 flex items-center">
+      <div className="container mx-auto flex items-center justify-between px-5">
         <Link href="/">
-          <img
-            ref={logoRef}
-            src="/logo-w.png"
-            alt="logo"
-            className="w-[180px] transition-all"
-          />
+          <img ref={logoRef} src="/logo-w.png" alt="logo" className="w-[130px] md:w-[180px]" />
         </Link>
 
-        <ul className="flex items-center gap-10 font-normal text-white">
+        {/* ✅ 모바일 메뉴 버튼 */}
+        <button onClick={openMenu} className="m-menu text-white md:hidden">
+          <Icon icon="subway:menu" width="27" height="27" />
+        </button>
+
+        <ul className="hidden md:flex gap-10 text-white">
           {menuItems.map((item) => (
             <li key={item.target}>
               <button
                 onClick={() => handleMenuClick(item.target)}
-                className={`cursor-pointer transition-colors ${activeMenu === item.target ? "text-[#3f8da8]" : "text-white"
-                  }`}
+                className={`transition-colors ${activeMenu === item.target ? "text-[#3f8da8]" : "text-white"
+                  } cursor-pointer`}
               >
                 {item.name}
               </button>
             </li>
           ))}
-
           <li>
             <Link href="/" className="opacity-80 hover:opacity-100">
               ENG
             </Link>
           </li>
-
           <li>
             <button
               onClick={() => handleMenuClick("sectionContact")}

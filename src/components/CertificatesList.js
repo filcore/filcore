@@ -14,7 +14,7 @@ export default function CertificatesList() {
   const { setSelectedProduct } = useProductStore();
 
   return (
-    <div className="grid grid-cols-4 gap-5">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
       {products.map((prd) => {
         const img = `/prds/${prd.name}-.png`;
         return (

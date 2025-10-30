@@ -2,16 +2,16 @@ import React from 'react'
 
 export default function SectionGreeting() {
   return (
-    <section className="section sectionGreeting min-h-screen bg-zinc-100 flex items-center justify-center bg-[url(/white1.jpg)] bg-cover bg-center py-40">
-      <div className='container mx-auto grid grid-cols-3 gap-25 place-items-start'>
+    <section className="section sectionGreeting min-h-screen bg-zinc-100 flex items-center justify-center bg-[url(/white1.jpg)] bg-cover bg-center py-20 md:py-40">
+      <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-25 place-items-start px-5 md:px-0'>
         <div className='grid grid-cols-1 gap-2 text-2xl col-span-1'>
           <div className='text-5xl font-black mb-5'>
             Greeting.
           </div>
-          <div className='text-xl'>
+          <div className='text-lg md:text-xl'>
             Your Business Partner for Water Treatment
           </div>
-          <div className='text-2xl font-light'>
+          <div className='text-xl md:text-2xl font-light'>
             세계와 경쟁하며, 신뢰로 성장하는 기업. 깨끗한 물을 위한 기술혁신으로
             지속 가능한 내일을 만들어갑니다.
           </div>

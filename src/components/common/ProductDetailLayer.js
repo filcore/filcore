@@ -10,7 +10,7 @@ export default function ProductDetailLayer() {
 
   return (
     <div
-      className="prdLayerBg fixed z-50 bg-black/30 backdrop-blur-sm top-0 left-0 inset-0 flex items-center justify-center"
+      className="prdLayerBg fixed z-50 bg-black/30 backdrop-blur-sm top-0 left-0 inset-0 flex items-center justify-center px-5 md:px-0"
       onClick={clearSelectedProduct}
     >
       <div

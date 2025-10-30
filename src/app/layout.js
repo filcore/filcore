@@ -7,6 +7,7 @@ import SideFixedMenu from "@/components/layouts/SideFixedMenu";
 import SmoothScrollProvider from "@/components/layouts/SmoothScrollProvider";
 import ProductDetailLayer from "@/components/common/ProductDetailLayer";
 import NewsDetail from "@/components/common/NewsDetail";
+import MobileMenuWrap from '@/components/common/MobileMenuWrap';
 
 const notoSansKR = Noto_Sans_KR({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html className={`${notoSansKR.variable} ${openSans.variable}`} lang="ko">
       <body className="antialiased">
+        <MobileMenuWrap />
         <NewsDetail />
         <ProductDetailLayer />
         <HeaderFixed />

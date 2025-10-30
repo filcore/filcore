@@ -103,13 +103,13 @@ export default function SectionHistory() {
   }, [activeYear]);
 
   return (
-    <section className="section sectionHistory min-h-screen bg-zinc-50 flex items-center justify-center py-40">
-      <div className="container mx-auto grid grid-cols-3 gap-25 place-items-start">
+    <section className="section sectionHistory min-h-screen bg-zinc-50 flex items-center justify-center py-20 md:py-40">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-25 place-items-start px-5 md:px-0">
         {/* 왼쪽 텍스트 */}
         <div className="grid grid-cols-1 gap-2 text-2xl col-span-1">
           <div className="text-5xl font-black mb-5">History.</div>
-          <div className="text-xl">Filcore MF & UF membranes</div>
-          <div className="text-2xl font-light">
+          <div className="text-lg md:text-xl">Filcore MF & UF membranes</div>
+          <div className="text-xl md:text-2xl font-light">
             필코아는 완벽한 품질 관리를 기반으로 고효율, 고성능 MF& UF중공사막필터를 개발하여 세계로 수출합니다.
           </div>
         </div>

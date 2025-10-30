@@ -3,7 +3,7 @@ import React from 'react'
 export default function SectionFooter() {
   return (
     <div className="w-full bg-zinc-900">
-      <div className="container mx-auto min-h-30 flex items-center text-white py-10">
+      <div className="container mx-auto min-h-30 flex items-center text-white py-10 px-10 md:px-0">
         <div className="text-sm space-y-1">
           <div className="text-lg">(주)필코아</div>
           <div>대표 : 김승현</div>

@@ -10,7 +10,7 @@ export default function NewsDetail() {
 
   return (
     <div
-      className="newsDetail fixed inset-0 bg-white/50 backdrop-blur-sm flex items-center justify-center z-50"
+      className="newsDetail fixed inset-0 bg-white/50 backdrop-blur-sm flex items-center justify-center z-50 px-5 md:px-0"
       onClick={closeNews} // 배경 클릭 시 닫힘
     >
       <div
