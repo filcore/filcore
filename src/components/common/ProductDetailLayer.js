@@ -14,7 +14,7 @@ export default function ProductDetailLayer() {
       onClick={clearSelectedProduct}
     >
       <div
-        className="container mx-auto relative bg-white rounded-4xl p-10 grid grid-cols-2 gap-15 max-w-6xl min-h-80"
+        className="container mx-auto relative bg-white rounded-4xl p-10 grid grid-cols-1 md:grid-cols-2 gap-15 max-w-6xl min-h-80"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -45,7 +45,7 @@ export default function ProductDetailLayer() {
           <img
             src={selectedProduct.detailsImg}
             alt={selectedProduct.name}
-            className="max-h-[600px] object-contain"
+            className="max-h-[300px] md:max-h-[600px] object-contain"
           />
         </div>
       </div>
