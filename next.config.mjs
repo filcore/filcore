@@ -45,8 +45,8 @@ const nextConfig = {
             key: "Content-Security-Policy",
             value:
               "default-src 'self'; " + // 기본은 자기 사이트 리소스만 허용
-              "script-src 'self' 'unsafe-inline'; " + // 스크립트는 자기 사이트 + inline 허용
-              "style-src 'self' 'unsafe-inline'; " + // 스타일은 자기 사이트 + inline 허용
+              "script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; " + // Next.js / GSAP 정상 작동 보장
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " + // Tailwind + Google Fonts 허용
               "img-src 'self' data:; " + // 이미지 자기 사이트 + data URI 허용
               "connect-src 'self' https://api.iconify.design https://api.unisvg.com https://api.simplesvg.com; " + // 외부 API 허용
               "font-src 'self'; " + // 폰트 자기 사이트만
