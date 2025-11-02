@@ -6,10 +6,14 @@ import { scrollToSection } from "@/utils/scrollToSection";
 import { Icon } from "@iconify/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
+import { useTranslations, useLocale } from "next-intl"; // ✅ 추가
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function MobileMenuWrap() {
+  const t = useTranslations("Menu"); // ✅ 번역 함수
+  const locale = useLocale(); // ✅ 현재 언어
+
   const { isMenuOpen, closeMenu, activeMenu, setActiveMenu } = useMenuStore();
 
   // ScrollTrigger로 섹션 진입 시 activeMenu 업데이트
@@ -53,17 +57,17 @@ export default function MobileMenuWrap() {
                   closeMenu();
                 }}
               >
-                {item.name}
+                {t(item.key)} {/* ✅ 번역 적용 */}
               </button>
             </li>
           ))}
 
           <li>
             <a
-              href="/"
+              href={`/${locale === "ko" ? "en" : "ko"}`} // ✅ 언어 전환
               className="block text-gray-800 hover:text-[#3f8da8]"
             >
-              ENG
+              {t("eng")}
             </a>
           </li>
 
@@ -75,7 +79,7 @@ export default function MobileMenuWrap() {
               }}
               className="bg-[#54a8c7] text-white w-full p-2 rounded-md hover:bg-[#3f8da8]"
             >
-              Contact Us
+              {t("contact")} {/* ✅ 번역 적용 */}
             </button>
           </li>
         </ul>
