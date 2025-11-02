@@ -1,39 +1,43 @@
-import React from 'react'
+"use client";
+import React from 'react';
+import { useTranslations } from "next-intl";
 
 export default function SectionRnd() {
+  const t = useTranslations("SectionRnd"); // JSON의 rnd 키
+
   return (
-    <section className="section sectionRnd min-h-screen bg-zinc-100 flex items-center justify-center bg-[url(/rnd1.jpg)] bg-cover bg-center py-20 md:py-40">
+    <section id='sectionRnd' className="section sectionRnd min-h-screen bg-zinc-100 flex items-center justify-center bg-[url(/rnd1.jpg)] bg-cover bg-center py-20 md:py-40">
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-25 place-items-start px-5 md:px-0'>
         <div className='grid grid-cols-1 gap-2 text-2xl col-span-1 text-white'>
           <div className='text-5xl font-black mb-5'>
-            R&D Center.
+            {t("title")}
           </div>
           <div className='text-lg md:text-xl'>
-            Driving Innovation Through Research and Technology
+            {t("subtitle")}
           </div>
           <div className='text-xl md:text-2xl font-light'>
-            연구소소개
+            {t("description")}
           </div>
         </div>
         <div className='col-span-2'>
           <div className='p-10 bg-white/80 backdrop-blur-sm rounded-4xl text-lg space-y-5 border border-white'>
             <div className='text-2xl font-bold'>
-              ㈜필코아의 미래가치 창출은 기술연구소로부터 시작됩니다.
+              {t("introTitle")}
             </div>
             <p>
-              2007년도 창립이후, 2008년도에 전문 연구 기관으로서 기업관련 연구기관으로 인정 받았습니다. 우리는 최첨단 제품을 제공하며, 가장 신뢰할 수 있는 제품이 되기 위하여 기술을 개발하고, 제품을 개선하는데 심혈을 기울이고 있습니다.
+              {t("introText")}
             </p>
             <div className='text-2xl font-bold'>
-              연구분야
+              {t("researchTitle")}
             </div>
             <div>
               <div className='text-xl font-semibold'>
-                막 & 모듈개발
+                {t("research1Title")}
               </div>
-              <p>정수용 분야: 일반 정수용, 자연압 제품, 상업용 제품, 간이 상수도용</p>
-              <p>산업용 분야: 초순수 제조 분야, 반도체용, RO system 전처리용 등</p>
-              <p>의료용 분야: pyrogen free water, 의료기구 세정용, 손 세척용 등</p>
-              <p>기타 막 개발: Nano filter membrane, 탈기막</p>
+              <p>{t("research1Desc1")}</p>
+              <p>{t("research1Desc2")}</p>
+              <p>{t("research1Desc3")}</p>
+              <p>{t("research1Desc4")}</p>
             </div>
             <div className='grid grid-cols-3 gap-5'>
               <img src="/s1.png" alt="" className='rounded-xl' />
@@ -44,5 +48,5 @@ export default function SectionRnd() {
         </div>
       </div>
     </section>
-  )
+  );
 }

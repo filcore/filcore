@@ -1,0 +1,82 @@
+{
+  "Menu": {
+    "greeting": "Greeting",
+    "products": "Products",
+    "rnd": "R&D",
+    "news": "News",
+    "contact": "Contact Us",
+    "eng": "한국어"
+  },
+  "Section1Hero": {
+    "subtitle": "Leading Pioneer in Global Water Purification Technology",
+    "title": "Your Trusted Partner in Advanced Water Treatment"
+  },
+  "SectionGreeting": {
+    "title": "Greeting.",
+    "subtitle": "Your Business Partner for Water Treatment",
+    "description": "A company growing with trust while competing globally. We create a sustainable future through technological innovation for clean water.",
+    "paragraph1": "Since its establishment in 2007, Filcore Co., Ltd. has provided reliable water treatment solutions based on thorough quality control and customer-centric management. We constantly research and develop various competitive grades and forms of products, including UF hollow fiber membranes, to meet diverse customer needs.",
+    "paragraph2": "We aim not only to supply products but also to lead the water treatment industry through continuous technological innovation and advanced research. All products of Filcore Co., Ltd. combine state-of-the-art technology with rigorous quality control so that customers can use them with confidence.",
+    "paragraph3": "We promise to continue prioritizing customer satisfaction based on our technology and quality and strive to become the top water treatment brand recognized in the global market.",
+    "paragraph4": "The future value of Filcore Co., Ltd. starts from our research institute and innovative development. Leveraging the expertise gained through R&D, we provide diverse products and solutions covering water treatment for domestic, industrial, and medical applications, adding real value to our customers' lives and work sites.",
+    "paragraph5": "Filcore Co., Ltd. will continue to lead the water treatment industry with the mission of 'making the world clean with trust and technology,' fostering continuous innovation and growth alongside our customers.",
+    "paragraph6": "Thank you.",
+    "signature": "CEO, Filcore Co., Ltd.",
+    "ceo": "Seunghyun Kim"
+  },
+  "SectionHistory": {
+    "title": "History.",
+    "subtitle": "Filcore MF & UF membranes",
+    "description": "Based on perfect quality control, Filcore develops high-efficiency, high-performance MF & UF hollow fiber filters and exports them worldwide."
+  },
+  "SectionProducts": {
+    "title": "Products.",
+    "subtitle": "Innovative Membrane Solutions",
+    "description": "Flow rates may vary depending on raw water condition and outlet size.",
+    "tabs": {
+      "home": "Home Purifier",
+      "industrial": "Commercial & Industrial",
+      "medical": "Medical",
+      "other": "Accessories"
+    }
+  },
+  "SectionRnd": {
+    "title": "R&D Center.",
+    "subtitle": "Driving Innovation Through Research and Technology",
+    "description": "Introduction to the R&D Center",
+    "introTitle": "Filcore's future value creation starts with the technology research lab.",
+    "introText": "Since its founding in 2007, it was recognized in 2008 as a professional corporate research institution. We devote ourselves to developing technology and improving products to provide the most advanced and reliable products.",
+    "researchTitle": "Research Areas",
+    "research1Title": "Membrane & Module Development",
+    "research1Desc1": "Water purification: general water, gravity-fed products, commercial products, small-scale water supply",
+    "research1Desc2": "Industrial: ultrapure water production, semiconductor, RO system pretreatment, etc.",
+    "research1Desc3": "Medical: pyrogen-free water, medical device cleaning, hand washing, etc.",
+    "research1Desc4": "Other membrane development: Nano filter membrane, degassing membrane"
+  },
+  "SectionCertificates": {
+    "title": "Patents & Certifications.",
+    "subtitle": "Trusted Technology, Proven by Certifications",
+    "description": "Patents / Certificates"
+  },
+  "SectionContact": {
+    "title": "Contact.",
+    "email": "Email.",
+    "domestic": "Domestic Sales",
+    "overseas": "Overseas Sales",
+    "tel": "Tel.",
+    "fax": "Fax.",
+    "addr": "Addr.",
+    "address": "60 Sangidaehak-ro, Siheung-si, Gyeonggi-do, 1Na 402, 15085",
+    "googleMap": "GoogleMap",
+    "newsTitle": "News."
+  },
+  "SectionFooter": {
+    "company": "Filcore Co., Ltd.",
+    "ceo": "CEO : Seunghyun Kim",
+    "address": "60 Sangidaehak-ro, Siheung-si, Gyeonggi-do, 1Na 402, 15085",
+    "telFax": "TEL : +82-31-433-3988 | FAX : +82-31-433-3987",
+    "emailDomestic": "Domestic Sales : domestic@filcore.co.kr",
+    "emailGlobal": "Overseas Sales : overseas@filcore.co.kr",
+    "copyright": "Copyright © filcore.co.kr 2019"
+  }
+}

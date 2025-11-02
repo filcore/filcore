@@ -1,25 +1,18 @@
-'use client'
-import Section1Hero from "@/components/SectionHero";
-import SectionGreeting from "@/components/SectionGreeting";
-import SectionHistory from "@/components/SectionHistory";
-import SectionProducts from "@/components/SectionProducts";
-import SectionRnd from "@/components/SectionRnd";
-import SectionCertificates from "@/components/SectionCertificates";
-import SectionContact from "@/components/SectionContact";
-import SectionFooter from '@/components/SectionFooter';
+// src/app/page.js (또는 page.tsx)
+import { redirect } from 'next/navigation';
+import { headers } from 'next/headers';
+import { routing } from '@/i18n/routing';
 
-export default function Home() {
-  return (
-    <main>
-      {/* 섹션별 제목/텍스트 */}
-      <Section1Hero />
-      <SectionGreeting />
-      <SectionHistory />
-      <SectionProducts />
-      <SectionRnd />
-      <SectionCertificates />
-      <SectionContact />
-      <SectionFooter />
-    </main>
-  );
+export default function RootPage() {
+  const acceptLanguage = headers().get('accept-language');
+  const defaultLocale = routing.defaultLocale || 'ko';
+
+  // 브라우저 언어 감지
+  const userLang = acceptLanguage?.split(',')[0].toLowerCase() || '';
+  const locale =
+    userLang.startsWith('en') ? 'en' :
+      userLang.startsWith('ko') ? 'ko' :
+        defaultLocale;
+
+  redirect(`/${locale}`);
 }

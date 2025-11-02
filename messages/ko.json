@@ -1,0 +1,82 @@
+{
+  "Menu": {
+    "greeting": "인사말",
+    "products": "제품소개",
+    "rnd": "기술연구소",
+    "news": "필코아소식",
+    "contact": "문의하기",
+    "eng": "ENG"
+  },
+  "Section1Hero": {
+    "subtitle": "세계와 경쟁하는 정수 기술의 선두주자",
+    "title": "Your Trusted Partner in Advanced Water Treatment"
+  },
+  "SectionGreeting": {
+    "title": "Greeting.",
+    "subtitle": "Your Business Partner for Water Treatment",
+    "description": "세계와 경쟁하며, 신뢰로 성장하는 기업. 깨끗한 물을 위한 기술혁신으로 지속 가능한 내일을 만들어갑니다.",
+    "paragraph1": "㈜필코아는 2007년 설립 이래, 완벽한 품질 관리와 철저한 고객 중심 경영을 바탕으로 신뢰할 수 있는 정수 솔루션을 제공해왔습니다. 저희는 UF용 중공사막을 비롯하여 경쟁력 있는 다양한 Grade와 형태의 제품을 연구·개발하며, 고객의 다양한 요구에 부응하기 위해 끊임없이 노력하고 있습니다.",
+    "paragraph2": "우리는 단순히 제품을 공급하는 것을 넘어, 지속적인 기술 혁신과 첨단 연구를 통해 수처리 산업의 발전을 선도하고자 합니다. ㈜필코아의 모든 제품은 최첨단 기술과 철저한 품질 관리를 결합하여, 고객이 믿고 안심하며 사용할 수 있도록 제작되고 있습니다.",
+    "paragraph3": "저희는 앞으로도 기술력과 품질을 바탕으로 고객 만족을 최우선으로 하고, 글로벌 시장에서도 인정받는 최고의 수처리 전문 브랜드가 되기 위해 최선을 다할 것을 약속드립니다.",
+    "paragraph4": "㈜필코아의 미래 가치는 기술연구소와 혁신적 개발에서 시작됩니다. 연구개발을 통해 확보한 전문성을 바탕으로, 정수용·산업용·의료용 분야를 아우르는 다양한 제품과 솔루션을 제공하며, 고객의 삶과 산업 현장에 실질적 가치를 더하고자 합니다.",
+    "paragraph5": "앞으로도 ㈜필코아는 ‘신뢰와 기술로 세상을 깨끗하게’라는 사명 아래, 지속적인 혁신과 연구로 수처리 산업을 선도하며, 고객과 함께 성장해 나가겠습니다.",
+    "paragraph6": "감사합니다.",
+    "signature": "㈜필코아 대표",
+    "ceo": "김승현"
+  },
+  "SectionHistory": {
+    "title": "History.",
+    "subtitle": "Filcore MF & UF membranes",
+    "description": "필코아는 완벽한 품질 관리를 기반으로 고효율, 고성능 MF& UF중공사막필터를 개발하여 세계로 수출합니다."
+  },
+  "SectionProducts": {
+    "title": "Products.",
+    "subtitle": "혁신적인 멤브레인 솔루션",
+    "description": "기재 되어있는 유량은 원수 상태 및 출수구 크기에 따라 다를 수 있습니다.",
+    "tabs": {
+      "home": "가정용 정수기",
+      "industrial": "상업용&산업용",
+      "medical": "의료용",
+      "other": "기타"
+    }
+  },
+  "SectionRnd": {
+    "title": "R&D Center.",
+    "subtitle": "Driving Innovation Through Research and Technology",
+    "description": "연구소소개",
+    "introTitle": "㈜필코아의 미래가치 창출은 기술연구소로부터 시작됩니다.",
+    "introText": "2007년도 창립이후, 2008년도에 전문 연구 기관으로서 기업관련 연구기관으로 인정 받았습니다. 우리는 최첨단 제품을 제공하며, 가장 신뢰할 수 있는 제품이 되기 위하여 기술을 개발하고, 제품을 개선하는데 심혈을 기울이고 있습니다.",
+    "researchTitle": "연구분야",
+    "research1Title": "막 & 모듈개발",
+    "research1Desc1": "정수용 분야: 일반 정수용, 자연압 제품, 상업용 제품, 간이 상수도용",
+    "research1Desc2": "산업용 분야: 초순수 제조 분야, 반도체용, RO system 전처리용 등",
+    "research1Desc3": "의료용 분야: pyrogen free water, 의료기구 세정용, 손 세척용 등",
+    "research1Desc4": "기타 막 개발: Nano filter membrane, 탈기막"
+  },
+  "SectionCertificates": {
+    "title": "Patents & Certifications.",
+    "subtitle": "Trusted Technology, Proven by Certifications",
+    "description": "특허/인증서"
+  },
+  "SectionContact": {
+    "title": "Contact.",
+    "email": "Email.",
+    "domestic": "국내영업 문의",
+    "overseas": "해외영업 문의",
+    "tel": "Tel.",
+    "fax": "Fax.",
+    "addr": "Addr.",
+    "address": "경기도 시흥시 산기대학로 60, 시화공단 1나 402호 우편번호 15085",
+    "googleMap": "GoogleMap",
+    "newsTitle": "News."
+  },
+  "SectionFooter": {
+    "company": "(주)필코아",
+    "ceo": "대표 : 김승현",
+    "address": "경기도 시흥시 산기대학로 60, 시화공단 1나 402호 우편번호 15085",
+    "telFax": "TEL : 031-433-3988 | FAX : 031-433-3987",
+    "emailDomestic": "국내 : domestic@filcore.co.kr",
+    "emailGlobal": "해외 : overseas@filcore.co.kr",
+    "copyright": "Copyright © filcore.co.kr 2019"
+  }
+}
