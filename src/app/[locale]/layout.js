@@ -27,7 +27,7 @@ const openSans = Open_Sans({
 });
 
 export default async function LocaleLayout({ children, params }) {
-  const { locale } = params;
+  const { locale } = await params;
 
   // 유효하지 않은 locale이면 404
   if (!hasLocale(routing.locales, locale)) {
