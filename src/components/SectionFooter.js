@@ -8,7 +8,7 @@ export default function SectionFooter() {
 
   return (
     <div className="w-full bg-zinc-900">
-      <div className="container mx-auto min-h-30 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-0 items-start text-white py-10 px-10 md:px-0">
+      <div className="container mx-auto min-h-30 grid grid-cols-1 md:grid-cols-2  items-start text-white py-10 px-10 md:px-0">
         <div className="text-sm space-y-1">
           <div className="text-lg">{t("company")}</div>
           <div>{t("ceo")}</div>
