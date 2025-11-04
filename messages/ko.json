@@ -5,6 +5,7 @@
     "rnd": "기술연구소",
     "news": "필코아소식",
     "contact": "문의하기",
+    "pdf": "회사소개서",
     "eng": "ENG"
   },
   "Section1Hero": {
@@ -77,6 +78,7 @@
     "telFax": "TEL : 031-433-3988 | FAX : 031-433-3987",
     "emailDomestic": "국내 : domestic@filcore.co.kr",
     "emailGlobal": "해외 : overseas@filcore.co.kr",
-    "copyright": "Copyright © filcore.co.kr 2019"
+    "copyright": "Copyright © filcore.co.kr 2019",
+    "pdf": "필코아 회사소개서"
   }
 }

@@ -82,6 +82,16 @@ export default function MobileMenuWrap() {
               {t("contact")} {/* ✅ 번역 적용 */}
             </button>
           </li>
+
+          <li>
+            <a
+              href="/files/Filcore Catalogue 2024.pdf"
+              download
+              className=" bg-black text-white p-3 rounded-lg flex gap-3"
+            >
+              <Icon icon="vscode-icons:file-type-pdf2" width="28" height="28" /> 회사소개서 다운로드
+            </a>
+          </li>
         </ul>
       </div>
     </div>

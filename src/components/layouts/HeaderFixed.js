@@ -79,7 +79,7 @@ export default function HeaderFixed() {
           <Icon icon="subway:menu" width="27" height="27" />
         </button>
 
-        <ul className="hidden md:flex gap-10 text-white">
+        <ul className="hidden md:flex gap-10 text-white items-center">
           {menuItems.map((item) => (
             <li key={item.target}>
               <button
@@ -92,17 +92,27 @@ export default function HeaderFixed() {
             </li>
           ))}
           <li>
-            <Link href={`/${locale === "ko" ? "en" : "ko"}`} className="opacity-80 hover:opacity-100">
-              {t("eng")}
-            </Link>
+            <a
+              href="/files/Filcore Catalogue 2024.pdf"
+              download
+              className="  text-[#9bd2e7] flex gap-2 items-center"
+            >
+              <Icon icon="vscode-icons:file-type-pdf2" width="20" height="20" />
+              {t("pdf")}
+            </a>
           </li>
           <li>
             <button
               onClick={() => handleMenuClick("sectionContact")}
-              className="bg-[#54a8c7] text-white p-1 px-2 rounded-md hover:bg-[#3f8da8] transition-colors cursor-pointer"
+              className="bg-[#54a8c7] text-white p-1 px-2 rounded-md cursor-pointer"
             >
               {t("contact")}
             </button>
+          </li>
+          <li>
+            <Link href={`/${locale === "ko" ? "en" : "ko"}`} className="opacity-80 hover:opacity-100">
+              {t("eng")}
+            </Link>
           </li>
         </ul>
       </div>
