@@ -8,8 +8,22 @@ const historyData = [
   {
     year: "2020 ~",
     content: {
-      ko: ["2020. 09. 필코아 확장이전"],
-      en: ["Sep 2020. Filcore relocated to a bigger facility"]
+      ko: [
+        "2025. 07. 방콕 Thaiwater 전시회 참가",
+        "2025. 03. 암스테르담 Aquatech 2025 전시회 참가",
+        "2024. 10. 호치민 Vietwater 전시회 참가",
+        "2023. 11. 암스테르담 Aquatech 2023 전시회 참가",
+        "2022. 12. 쿠알라룸푸르 Asiawater 2022 전시회 참가",
+        "2020. 09. 필코아 확장이전"
+      ],
+      en: [
+        "Jul 2025. Participated in Thaiwater Exhibition, Bangkok",
+        "Mar 2025. Participated in Aquatech 2025 Exhibition, Amsterdam",
+        "Oct 2024. Participated in Vietwater Exhibition, Ho Chi Minh City",
+        "Nov 2023. Participated in Aquatech 2023 Exhibition, Amsterdam",
+        "Dec 2022. Participated in Asiawater 2022 Exhibition, Kuala Lumpur",
+        "Sep 2020. Relocated and expanded FILCORE headquarters",
+      ]
     }
   },
   {
@@ -17,11 +31,9 @@ const historyData = [
     content: {
       ko: [
         "2019. 11. 암스테르담 Aquatech 2019 전시회 참가",
-        "2018. 11. 베트남 Vietwater2018 전시회 참관"
       ],
       en: [
         "Nov 2019. Participated in Aquatech Amsterdam 2019",
-        "Nov 2018. Visited Vietwater 2018 in Vietnam"
       ]
     }
   },
@@ -78,7 +90,7 @@ const historyData = [
       en: [
         "Nov 2010. Designated as Promising Exporting SME (No. 2010 Kyeonggi-255)",
         "Sep 2010. ISO9001:2008 Certification obtained (ICR: No. Q470910)",
-        "Jan 2010. Exported hollow fiber membranes overseas"
+        "Jan 2010. Expanded overseas with hollow fiber membrane products",
       ]
     }
   },
@@ -86,16 +98,16 @@ const historyData = [
     year: "2008 ~ 2009",
     content: {
       ko: [
+        "2009. 12. 제 3차 설비 증설.",
         "2008. 10. “기업부설연구소” 설립 (KOITA)",
         "2008. 08. 벤처기업 인정 (No. 20080202602)",
-        "2008. 08. 제 1차, 2차 설비 증설.",
         "2008. 05. 특허출원(No. 10-2008-0051065) ‘중공사 분리막 포팅용 유로장치 및 이를 포함하는 원심포팅 시스템’",
         "2008. 02. 특허출원(No. 10-2008-13448) ‘수투과성이 우수한 폴리설폰 중공사막 및 이의 제조방법’"
       ],
       en: [
+        "Dec 2009. Completed the 3rd facility expansion",
         "Oct 2008. Established Corporate R&D Lab (KOITA)",
         "Aug 2008. Recognized as a Venture Company (No. 20080202602)",
-        "Aug 2008. Expanded facilities (1st & 2nd phase)",
         "May 2008. Patent applied (No. 10-2008-0051065) for hollow fiber membrane potting system",
         "Feb 2008. Patent applied (No. 10-2008-13448) for highly water-permeable polysulfone hollow fiber membrane"
       ]
@@ -188,7 +200,7 @@ export default function SectionHistory() {
                 ref={(el) => (refs.current[item.year] = el)}
                 className="overflow-hidden h-0"
               >
-                <div className="text-lg bg-zinc-50 p-3">
+                <div className="text-lg bg-zinc-50 p-3 space-y-2">
                   {item.content[locale]?.map((line, idx) => (
                     <p key={idx}>{line}</p>
                   ))}
